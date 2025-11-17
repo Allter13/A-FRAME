@@ -1,19 +1,23 @@
 <html>
-  <head>
-    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
-  </head>
-  <body>
-    <a-scene>
-      
-      <a-plane position="0 -2 -4" rotation="-90 0 0" width="4" height="4" color="#FFC65D"></a-plane>
-      <a-plane position="0 0 -2" rotation="0 0 0" width="4" height="4" color="#4DD3D9"></a-plane>
-       <a-plane position="1 0 -4" rotation="0 -90 0" width="4" height="4" color="#4CC3D9"></a-plane>
-        <a-plane position="-1 0 -4" rotation="0 -90 0" width="4" height="4" color="#4CC3D9"></a-plane>
-        <a-plane position="0 1 -6" rotation="0 0 0" width="4" height="4" color="#4CF3D9"></a-plane>
-    
-      <a-sky color="#ECECEC"></a-sky>
-      
-  
+<head>
+  <meta charset="utf-8">
+  <title>Model Viewer AR - VR</title>
+  <meta name="description" content="Model Viewer (VR / AR) • A-Frame">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script src="../../../dist/aframe-master.min.js"></script>
+  <script src="../../js/info-message.js"></script>
+  <script src="animation-mixer.js"></script>
+  <script src="ar-shadows.js"></script>
+  <script src="model-viewer.js"></script>
+  <script src="background-gradient.js"></script>
+</head>
+<body>
+
+<a-scene
+  renderer="colorManagement: true;"
+  info-message="htmlSrc: #messageText"
+  model-viewer="gltfModel: #triceratops; title: Triceratops"
+  xr-mode-ui="XRMode: xr">
   <a-assets timeout="10000">
     <!--
       Model source: https://sketchfab.com/3d-models/triceratops-d16aabe33dc24f8ab37e3df50c068265
@@ -27,7 +31,6 @@
     <img id="shadow" src="shadow.png">
     <a-asset-item id="messageText" src="message.html"></a-asset-item>
   </a-assets>
-
-    </a-scene>
-  </body>
+</a-scene>
+</body>
 </html>
