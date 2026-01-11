@@ -6,6 +6,14 @@
   </head>
   <body>
     <a-scene>
+        <a-camera > <a-cursor > </a-cursor >  </a-camera > 
+        <a-entity  vive-controls = "mano: izquierda" > </a-entity > 
+        <a-entity  vive-controls = "mano: derecha" > </a-entity >
+        <a-entity  hand-controls = "mano: izquierda" > </a-entity > 
+        <a-entity  hand-controls = "mano: derecha" > </a-entity > 
+        <a-entity  laser-controls = "mano: izquierda" > </a-entity > 
+        <a-entity  laser-controls = "mano: derecha" > </a-entity >
+
       <!-- ASSETS: Carga del modelo 3D -->
       <a-assets>
         <a-asset-item id="robot" src="Ciudad.glb"></a-asset-item>
