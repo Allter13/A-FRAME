@@ -8,29 +8,6 @@
     <a-scene>
 
 
-         <!-- Cámara -->
-       <a-entity position="0 1.6 0">
-       <a-camera>
-       <a-cursor 
-        color="#ffcc00" 
-        fuse="true" 
-        fuse-timeout="800"
-        geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.018">
-        </a-cursor>
-       </a-camera>
-       </a-entity>
-        
-        
-        
-        <a-entity  vive-controls = "mano: izquierda" > </a-entity > 
-        <a-entity  vive-controls = "mano: derecha" > </a-entity >
-        <a-entity  hand-controls = "mano: izquierda" > </a-entity > 
-        <a-entity  hand-controls = "mano: derecha" > </a-entity > 
-        <a-entity  laser-controls = "mano: izquierda" > </a-entity > 
-        <a-entity  laser-controls = "mano: derecha" > </a-entity >
-        <a-entity  meta-touch-controls = "mano: izquierda" > </a-entity > 
-        <a-entity  meta-touch-controls = "mano: derecha" > </a-entity >
-
       <!-- ASSETS: Carga del modelo 3D -->
       <a-assets>
         <a-asset-item id="robot" src="Ciudad.glb"></a-asset-item>
@@ -46,6 +23,14 @@
         type="ambient" 
         color="#666">
         </a-light>
+          <!-- Luz direccional dramática -->
+  <a-light 
+    type="directional" 
+    color="#ffffff"
+    intensity="0.6"
+    position="1 4 -2">
+  </a-light>
+  
     </a-scene>
   </body>
 </html>
